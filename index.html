@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Dit helpt met mijn leeftijd berekenen in miliseconds.
+    </h1>
+    <p>
+        kijk in het console.
+        <button onclick="leeftijed()">Bereken</button>
+    </p>
+</body>
+
+<script>
+function leeftijed(){
+    let now = new Date();
+    let geboorteJaar = prompt("in welk jaar ben je geboren?")
+    let geboortemaand = prompt("In welke maand? Gebruik een cijfer")
+    let geboortedag = prompt("Welke dag ben je geboren")
+    let birth = new Date(geboorteJaar, geboortemaand, geboortedag); 
+    let miliseconds = now-birth;
+    console.log(miliseconds)
+}
+
+leeftijed()
+</script>
+ 
+</html>
